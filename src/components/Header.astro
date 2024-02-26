@@ -1,0 +1,64 @@
+---
+
+---
+
+<header class="flex justify-between items-center py-4 px-6 bg-gray-900 text-white">
+  <div class="flex items-center">
+   <div class="flex-shrink-0 mr-4">
+    <img src="/g14.png" alt="" class="h-10">
+   </div>
+   <p class="text-lg">I.E.P San Nicolás</p>
+  </div>
+  <nav class="ml-auto md:block hidden">
+    <ul class="flex space-x-6">
+      <li><a href="https://www.google.com.pe" class="hover:text-gray-300">Inicio</a></li>
+      <li><a href="#" class="hover:text-gray-300">Nosotros</a></li>
+      <li><a href="#" class="hover:text-gray-300">Niveles</a></li>
+      <li><a href="#" class="hover:text-gray-300">Contacto</a></li>
+    </ul>
+  </nav>
+  <!-- Botón de menú para pantallas pequeñas -->
+  <button id="toggleMenu" class="md:hidden ml-auto focus:outline-none">
+    <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+<!-- Menú desplegable para dispositivos móviles -->
+<div id="mobileMenu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-75 z-50 hidden">
+    <div class="flex justify-end pt-4 pr-4">
+        <button id="closeMenu" class="text-white">
+            <svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M13.414 12l5.293 5.293a1 1 0 01-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 01-1.414-1.414L10.586 12 5.293 6.707a1 1 0 011.414-1.414L12 10.586l5.293-5.293a1 1 0 011.414 1.414L13.414 12z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+    </div>
+    <ul class="mt-6 mx-auto max-w-xs space-y-4">
+        <li><a href="https://www.google.com.pe" class="block text-center text-xl text-white hover-blue-hover">Inicio</a></li>
+        <li><a href="#" class="block text-center text-xl text-white hover-blue-hover">Nosotros</a></li>
+        <li><a href="#" class="block text-center text-xl text-white hover-blue-hover">Niveles</a></li>
+        <li><a href="#" class="block text-center text-xl text-white hover-blue-hover">Contacto</a></li>
+    </ul>
+</div>
+</header>
+<style>
+  .hover-blue-hover:hover {
+    background-color: blue; /* Color del texto azul al hacer hover */
+}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const toggleMenuButton = document.getElementById('toggleMenu');
+      const closeMenuButton = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      toggleMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+      });
+
+      closeMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+
+          
+      });
+  });
+</script>
